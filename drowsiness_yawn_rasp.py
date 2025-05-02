@@ -37,10 +37,9 @@ def alarm(msg):
 
     while alarm_status:
         print('call')
-        # Increase volume gradually using amixer (Raspberry Pi)
         for volume in range(10, 101, 10):  # Increase volume in steps of 10%
-            os.system(f'amixer sset PCM,0 {volume}%')  # Adjust volume using amixer
-            os.system(f'espeak -a {volume} "{msg}"')  # Adjust volume of espeak
+            os.system(f'amixer sset PCM,0 {volume}%')  
+            os.system(f'espeak -a {volume} "{msg}"')  
             time.sleep(1)  
             if not alarm_status: 
                 break
@@ -107,6 +106,7 @@ covered_counter = 0
 
 print("-> Loading the predictor and detector...")
 #detector = dlib.get_frontal_face_detector()
+# Adjust path as per your system
 detector = cv2.CascadeClassifier(r"C:\Users\Sanju\OneDrive\Desktop\IOT-MiniProject\haarcascade_frontalface_default.xml")    #Faster but less accurate
 predictor = dlib.shape_predictor(r"C:\Users\Sanju\OneDrive\Desktop\IOT-MiniProject\shape_predictor_68_face_landmarks.dat")
 
