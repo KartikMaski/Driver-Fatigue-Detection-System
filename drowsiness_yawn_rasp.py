@@ -23,7 +23,7 @@ GPIO.setup(BUZZER_PIN, GPIO.OUT)
 # Create PWM object
 pwm = GPIO.PWM(BUZZER_PIN, 1000)  
 pwm.start(50)
-
+ 
 
 # Function to change the volume of the buzzer
 def change_volume(volume_percent):
