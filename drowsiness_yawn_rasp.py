@@ -1,4 +1,5 @@
-#python drowniness_yawn.py --webcam webcam_index
+# SEM 4 IoT project
+# Drowsiness and Yawn Detection using OpenCV, Dlib, and Raspberry Pi GPIO
 
 import matplotlib.pyplot as plt
 from scipy.spatial import distance as dist
